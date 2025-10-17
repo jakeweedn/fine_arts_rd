@@ -1,6 +1,6 @@
 
 
-export class Art {
+export class Artwork {
 
     constructor(data) {
 
@@ -9,7 +9,7 @@ export class Art {
         this.height = data.height
         this.width = data.width
         this.originalLink = data.originalLink
-        this.imgUrl = data.imgUrl //do we really need more than one?
+        this.imgUrl = data.imgUrls.full//do we really need more than one?
 
     }
 

@@ -1,24 +1,25 @@
 <script setup>
 import { AppState } from '@/AppState.js';
-import Artwork from '@/components/Artwork.vue';
+import ArtworkCard from '@/components/ArtworkCard.vue';
 import Example from '@/components/Example.vue';
-import { artService } from '@/services/ArtService.js';
+
+import { artworkService } from '@/services/ArtworkService.js';
 import { logger } from '@/utils/Logger.js';
 import { Pop } from '@/utils/Pop.js';
 import { computed, onMounted } from 'vue';
 
 onMounted(() => {
   logger.log('Home page is unmounted')
-  artService.discoverArt()
+  artworkService.discoverArt()
 })
 
-const artworks = computed(() => AppState.arts)
+const artworks = computed(() => AppState.artworks)
 
 async function discoverArt() {
 
   try {
 
-    await artService.discoverArt()
+    await artworkService.discoverArt()
   } catch (error) {
 
     Pop.error(error)
@@ -33,24 +34,21 @@ async function discoverArt() {
 
 <template>
 
-  <!-- No Propls:   -->
-  <!-- <div v-for="art in artwork" :key="art.id">
-
-    <Artwork />
-
-    <!-- {{ art }} -->
 
 
-  <!-- </div> -->
+  <h1>hello </h1>
 
-  <div class="artwork">
-    <Artwork v-for="art in artworks" :key="art.id" :artwork="art" />
+
+  <div v-for="artwork in artworks" :key="artwork.id">
+
+
+    <ArtworkCard :artwork="artwork" />
 
   </div>
 
 
 
-  -->
+
 
   <Example />
 </template>
