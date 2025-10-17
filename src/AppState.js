@@ -28,6 +28,9 @@ export const AppState = reactive({
 
   ],
 
+  currentPage: 0,
+  totalPages: 35, //why is it 0 in the reference? 
+
 
   /**@type {import('@bcwdev/auth0provider-client').Identity} */
   identity: null,

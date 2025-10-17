@@ -2,6 +2,8 @@
 import { AppState } from '@/AppState.js';
 import ArtworkCard from '@/components/ArtworkCard.vue';
 import Example from '@/components/Example.vue';
+import PageNavigator from '@/components/PageNavigator.vue';
+
 
 import { artworkService } from '@/services/ArtworkService.js';
 import { logger } from '@/utils/Logger.js';
@@ -14,6 +16,9 @@ onMounted(() => {
 })
 
 const artworks = computed(() => AppState.artworks)
+
+// const currentPage = computed(() => AppState.currentPage)
+// const totalPages = computed(() => AppState.totalPages)
 
 async function discoverArt() {
 
@@ -34,9 +39,18 @@ async function discoverArt() {
 
 <template>
 
+  <PageNavigator />
 
 
-  <h1>hello </h1>
+
+
+  <!-- <h1 class="text-center">Fine Arts </h1>
+  <div class="d-flex justify-content-end mx-2">
+    <div>
+      <p> Current Page: {{ currentPage }}</p>
+      <p> Total Pages: {{ totalPages }}</p>
+    </div>
+  </div> -->
 
 
   <div v-for="artwork in artworks" :key="artwork.id">
