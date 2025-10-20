@@ -40,6 +40,34 @@ class ArtworkService {
 
     }
 
+    async likeArtwork(artworkId) {
+
+
+        const response = await api.post(`api/artworks/${artworkId}/admire`) //remember, : part of what is replaced 
+        logger.log('Liked artwork', response.data)
+
+
+
+        //Display who has liked the artwork to the page:-finish the below out...
+
+        let selectedArtwork = AppState.artworks.find((artwork) => artwork.id == artworkId)
+        let likesArray = selectedArtwork.admirers
+
+
+
+
+
+        //display to the page, then worry about splicing later...
+
+
+
+
+
+
+
+
+    }
+
 
 
 

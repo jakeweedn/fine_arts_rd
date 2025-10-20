@@ -34,7 +34,9 @@ export const AppState = reactive({
   searchTerm: '',
 
   // /** @type {import('./models/Artwork.js')} */
-  activeMovie: null,
+  activeArtWork: null,
+
+
 
 
   /**@type {import('@bcwdev/auth0provider-client').Identity} */
