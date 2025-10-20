@@ -20,6 +20,8 @@ const artworks = computed(() => AppState.artworks)
 // const currentPage = computed(() => AppState.currentPage)
 // const totalPages = computed(() => AppState.totalPages)
 
+
+
 async function discoverArt() {
 
   try {

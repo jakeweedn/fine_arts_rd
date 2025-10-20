@@ -31,6 +31,11 @@ export const AppState = reactive({
   currentPage: 0,
   totalPages: 35, //why is it 0 in the reference? 
 
+  searchTerm: '',
+
+  // /** @type {import('./models/Artwork.js')} */
+  activeMovie: null,
+
 
   /**@type {import('@bcwdev/auth0provider-client').Identity} */
   identity: null,
