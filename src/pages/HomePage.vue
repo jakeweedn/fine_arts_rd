@@ -1,6 +1,8 @@
 <script setup>
 import { AppState } from '@/AppState.js';
 import ArtworkCard from '@/components/ArtworkCard.vue';
+import ArtworkModal from '@/components/ArtworkModal.vue';
+
 import Example from '@/components/Example.vue';
 import PageNavigator from '@/components/PageNavigator.vue';
 
@@ -41,6 +43,13 @@ async function discoverArt() {
 
 <template>
 
+  <h1 class="text-center">Fine Arts </h1>
+
+  <ArtworkModal modalId="artwork-modal" modalTitle="Artwork" />
+
+
+
+
   <PageNavigator />
 
 
@@ -55,15 +64,16 @@ async function discoverArt() {
   </div> -->
 
 
+
+
+
+
   <div v-for="artwork in artworks" :key="artwork.id">
 
 
     <ArtworkCard :artwork="artwork" />
 
   </div>
-
-
-
 
 
   <Example />

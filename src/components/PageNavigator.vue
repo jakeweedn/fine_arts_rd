@@ -48,7 +48,7 @@ async function changePage(pageNumber) {
 
 <template>
 
-    <h1 class="text-center">Fine Arts </h1>
+
     <div class="d-flex justify-content-between mx-2">
         <div>
             <p> Current Page: {{ currentPage }} </p>

@@ -41,6 +41,8 @@ async function likeArtwork(artworkId) {
         <img :src="artwork.imgUrl" :alt="artwork.height">
 
         <button @click="likeArtwork(artwork.id)"> Like 👍 </button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#artwork-modal"> More info
+        </button>
 
         <h3> Admirers </h3>
         <div v-for="admirer in artwork.admirers" :key="admirer.id">
