@@ -35,20 +35,25 @@ async function likeArtwork(artworkId) {
 <template>
     <!-- Remember difference between argument and parameter! -->
 
-    <div>
-        <h1> {{ artwork.slug }} </h1>
+    <div class="col-md-6">
+        <!-- <h1> {{ artwork.slug }} </h1> -->
+        <div>
+            <div class="my-2">
+                <img :src="artwork.imgUrl" :alt="artwork.height" data-bs-toggle="modal"
+                    :data-bs-target="`#${artwork.id}`">
+            </div>
 
-        <img :src="artwork.imgUrl" :alt="artwork.height">
+            <div class="my-2 text-center">
+                <button @click="likeArtwork(artwork.id)"> Like 👍 </button>
+                <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#artwork-modal"> More info
+        </button> -->
+            </div>
 
-        <button @click="likeArtwork(artwork.id)"> Like 👍 </button>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#artwork-modal"> More info
-        </button>
-
-        <h3> Admirers </h3>
+            <!-- <h3> Admirers </h3>
         <div v-for="admirer in artwork.admirers" :key="admirer.id">
             <p> {{ admirer.name }}</p>
+        </div> -->
         </div>
-
 
 
     </div>

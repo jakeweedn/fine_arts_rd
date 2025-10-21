@@ -1,9 +1,12 @@
 <script setup>
+import { Artwork } from '@/models/Artwork.js';
+
 
 defineProps({
 
     modalId: { type: String, required: true },
-    modalTitle: { type: String, default: "Don't forget your title!" }
+    modalTitle: { type: String, default: "Don't forget your title!" },
+    artwork: Artwork
 })
 
 
@@ -28,6 +31,16 @@ defineProps({
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+
+                    <div v-for="admirer in artwork.admirers" :key="admirer.id">
+
+
+                        <h3> {{ artwork.slug }}</h3>
+                        <h4> Admirers: </h4>
+                        <p> {{ admirer.name }}, {{ admirer.picture }}</p>
+                    </div>
+
+
 
 
                     ...

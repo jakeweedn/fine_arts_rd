@@ -43,9 +43,9 @@ async function discoverArt() {
 
 <template>
 
-  <h1 class="text-center">Fine Arts </h1>
+  <h1 class="text-center"> Fine Arts </h1>
 
-  <ArtworkModal modalId="artwork-modal" modalTitle="Artwork" />
+
 
 
 
@@ -67,12 +67,15 @@ async function discoverArt() {
 
 
 
+  <div>
+    <div v-for="artwork in artworks" :key="artwork.id">
 
-  <div v-for="artwork in artworks" :key="artwork.id">
 
+      <ArtworkCard :artwork="artwork" />
 
-    <ArtworkCard :artwork="artwork" />
+      <ArtworkModal :modalId=artwork.id modalTitle="Artwork" :artwork="artwork" />
 
+    </div>
   </div>
 
 
