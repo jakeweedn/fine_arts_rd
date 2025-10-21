@@ -43,21 +43,37 @@ class ArtworkService {
     async likeArtwork(artworkId) {
 
 
-        const response = await api.post(`api/artworks/${artworkId}/admire`) //remember, : part of what is replaced 
-        logger.log('Liked artwork', response.data)
+        // Skeleton:
+
+        // let selectedArtwork = AppState.artworks.find((artwork) => artwork.id == artworkId)
+
+        // AppState.artworks.splice(selected artwork)
+
+        // const response = await api.post(`api/artworks/${artworkId}/admire`)
+        // logger.log(response.data)
+        // //remember, : part of what is replaced 
+
+        // AppState.artworks.splice(response)
 
 
-
-        //Display who has liked the artwork to the page:-finish the below out...
-
+        //assign variable to array of artworks in AppState
         let selectedArtwork = AppState.artworks.find((artwork) => artwork.id == artworkId)
-        let likesArray = selectedArtwork.admirers
+
+        const response = await api.post(`api/artworks/${artworkId}/admire`)
+        logger.log(response.data) //remember, : part of what is being replaced
+
+        const artwork = new Artwork(response.data) //don't forget this step!! //map is for a bunch of objects, what about when we just have one... 
+
+
+        AppState.artworks.splice(AppState.artworks.indexOf(selectedArtwork), 1, artwork)
 
 
 
 
 
-        //display to the page, then worry about splicing later...
+
+
+
 
 
 
