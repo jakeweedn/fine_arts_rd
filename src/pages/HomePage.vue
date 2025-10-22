@@ -43,19 +43,22 @@ async function discoverArt() {
 
 <template>
 
-  <h1 class="text-center"> Fine Arts </h1>
+  <h1 class="text-center"> Codeworks Institute of Fine Art </h1>
 
 
 
 
 
+  <section class="container">
+    <section class="row">
+      <div class="col-md-2">
+        <PageNavigator />
+      </div>
 
-  <PageNavigator />
 
 
 
-
-  <!-- <h1 class="text-center">Fine Arts </h1>
+      <!-- <h1 class="text-center">Fine Arts </h1>
   <div class="d-flex justify-content-end mx-2">
     <div>
       <p> Current Page: {{ currentPage }}</p>
@@ -67,19 +70,31 @@ async function discoverArt() {
 
 
 
-  <div>
-    <div v-for="artwork in artworks" :key="artwork.id">
+      <div class="col-md-10">
+
+        <section class="row">
+          <div v-for="artwork in artworks" :key="artwork.id" class="col-md-3">
 
 
-      <ArtworkCard :artwork="artwork" />
+            <ArtworkCard :artwork="artwork" />
 
-      <ArtworkModal :modalId=artwork.id modalTitle="Artwork" :artwork="artwork" />
+            <ArtworkModal :modalId=artwork.id modalTitle="Artwork" :artwork="artwork" />
 
-    </div>
-  </div>
+          </div>
+        </section>
+
+      </div>
+    </section>
+  </section>
 
 
   <Example />
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.artworkcard {
+
+  display: flex;
+  height: fit-content;
+}
+</style>

@@ -51,15 +51,15 @@ async function changePage(pageNumber) {
 
     <div class="d-flex justify-content-between mx-2">
         <div>
-            <p> Current Page: {{ currentPage }} </p>
-            <p> Total Pages: {{ totalPages }} </p>
+            <p> 📖{{ currentPage }} of {{ totalPages }} </p>
+
         </div>
         <div>
             <p> <button @click="changePage(currentPage - 1)" type="button" :disabled="currentPage < 2"
-                    class="btn btn-vue"> Previous Page </button>
+                    class="btn btn-vue rounded-pill"> Previous</button>
             </p>
             <p> <button @click="changePage(currentPage + 1)" type="button" :disabled="currentPage == totalPages"
-                    class="btn btn-vue"> Next Page </button> </p>
+                    class="btn btn-vue rounded-pill"> Next </button> </p>
         </div>
 
 
