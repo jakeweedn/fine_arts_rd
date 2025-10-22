@@ -49,7 +49,7 @@ async function changePage(pageNumber) {
 <template>
 
 
-    <div class="d-flex justify-content-between mx-2">
+    <div class="d-flex flex-column justify-content-between mx-2">
         <div>
             <p> 📖{{ currentPage }} of {{ totalPages }} </p>
 

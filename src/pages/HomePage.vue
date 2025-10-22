@@ -50,13 +50,15 @@ async function discoverArt() {
 
 
 
-  <section class="container">
+  <section>
     <section class="row">
       <div class="col-md-2 border my-2">
         <div class="my-2">
           <Login />
         </div>
-        <PageNavigator />
+        <div class="page-navigator">
+          <PageNavigator />
+        </div>
 
       </div>
 
@@ -76,7 +78,7 @@ async function discoverArt() {
 
 
       <div class="col-md-10">
-        <h3 class="my-2"> Codeworks Institute of Art</h3>
+        <h3 class="noto-serif-jp-yes"> Codeworks Institute of Art</h3>
         <section class="row">
           <div v-for="artwork in artworks" :key="artwork.id" class="col-md-3">
 
@@ -97,9 +99,34 @@ async function discoverArt() {
 </template>
 
 <style scoped lang="scss">
-.artworkcard {
+// .open-sans-coolio {
+//   font-family: "Open Sans", sans-serif;
+//   font-optical-sizing: auto;
+//   font-weight: 300px;
+//   font-style: normal;
+//   font-variation-settings:
+//     "wdth" 100;
+// }
 
-  display: flex;
-  height: fit-content;
+
+
+.noto-serif-jp-yes {
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-weight: 300px;
+  font-style: normal;
+}
+
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+
+.page-navigator {
+  position: relative;
+  top: 400px
 }
 </style>
