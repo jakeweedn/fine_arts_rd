@@ -8,14 +8,19 @@ import { RouterView } from 'vue-router';
 
 <template>
   <header>
-    <Navbar />
+    <!-- <Navbar /> -->
   </header>
   <main>
     <RouterView />
   </main>
   <footer class=" text-center">
-    Made with <i class="mdi mdi-heart text-pink"></i> by CodeWork
+    <!-- Made with <i class="mdi mdi-heart text-pink"></i> by CodeWork -->
   </footer>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+main {
+
+  background-color: skyblue
+}
+</style>

@@ -56,10 +56,10 @@ async function changePage(pageNumber) {
         </div>
         <div>
             <p> <button @click="changePage(currentPage - 1)" type="button" :disabled="currentPage < 2"
-                    class="btn btn-vue rounded-pill"> Previous</button>
+                    class="btn btn-light rounded-pill"> Previous</button>
             </p>
             <p> <button @click="changePage(currentPage + 1)" type="button" :disabled="currentPage == totalPages"
-                    class="btn btn-vue rounded-pill"> Next </button> </p>
+                    class="btn btn-light rounded-pill"> Next </button> </p>
         </div>
 
 

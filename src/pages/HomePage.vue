@@ -4,6 +4,7 @@ import ArtworkCard from '@/components/ArtworkCard.vue';
 import ArtworkModal from '@/components/ArtworkModal.vue';
 
 import Example from '@/components/Example.vue';
+import Login from '@/components/Login.vue';
 import PageNavigator from '@/components/PageNavigator.vue';
 
 
@@ -43,7 +44,7 @@ async function discoverArt() {
 
 <template>
 
-  <h1 class="text-center"> Codeworks Institute of Fine Art </h1>
+
 
 
 
@@ -51,8 +52,12 @@ async function discoverArt() {
 
   <section class="container">
     <section class="row">
-      <div class="col-md-2">
+      <div class="col-md-2 border my-2">
+        <div class="my-2">
+          <Login />
+        </div>
         <PageNavigator />
+
       </div>
 
 
@@ -71,7 +76,7 @@ async function discoverArt() {
 
 
       <div class="col-md-10">
-
+        <h3 class="my-2"> Codeworks Institute of Art</h3>
         <section class="row">
           <div v-for="artwork in artworks" :key="artwork.id" class="col-md-3">
 
@@ -88,7 +93,7 @@ async function discoverArt() {
   </section>
 
 
-  <Example />
+  <!-- <Example /> -->
 </template>
 
 <style scoped lang="scss">
