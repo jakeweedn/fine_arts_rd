@@ -22,7 +22,7 @@ defineProps({
 
     <!-- Modal -->
     <div class="modal fade" :id="modalId" tabindex="-1" :aria-labelledby="modalId + 'Label'" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-fullscreen">
             <div class="modal-content change-bg-color">
 
                 <!-- only need above -->
