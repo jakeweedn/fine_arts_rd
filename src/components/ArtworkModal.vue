@@ -31,8 +31,8 @@ defineProps({
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <h4> {{ artwork.description }}</h4>
-                    <div class="text-center">
+                    <p> {{ artwork.description }} </p>
+                    <div class="text-center my-5">
                         <img :src="artwork.imgUrl" :alt="artwork.height">
                     </div>
 
@@ -40,9 +40,11 @@ defineProps({
 
 
                         <!-- <h4> {{ artwork.description }}</h4> -->
-                        <h4 class="my-4"> Admirers: </h4>
-                        <p> {{ admirer.name }} </p>
-                        <img :src="admirer.picture" :alt="artwork.height">
+                        <div class="text-center">
+                            <h4 class="my-4"> Admirers: </h4>
+                            <p> {{ admirer.name }} </p>
+                            <img :src="admirer.picture" :alt="artwork.height">
+                        </div>
 
                     </div>
 
