@@ -23,7 +23,7 @@ defineProps({
     <!-- Modal -->
     <div class="modal fade" :id="modalId" tabindex="-1" :aria-labelledby="modalId + 'Label'" aria-hidden="true">
         <div class="modal-dialog modal-lg">
-            <div class="modal-content">
+            <div class="modal-content change-bg-color">
 
                 <!-- only need above -->
                 <div class="modal-header">
@@ -31,19 +31,25 @@ defineProps({
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <h4> {{ artwork.description }}</h4>
+                    <div class="text-center">
+                        <img :src="artwork.imgUrl" :alt="artwork.height">
+                    </div>
 
                     <div v-for="admirer in artwork.admirers" :key="admirer.id">
 
 
-                        <h3> {{ artwork.slug }}</h3>
-                        <h4> Admirers: </h4>
-                        <p> {{ admirer.name }}, {{ admirer.picture }}</p>
+                        <!-- <h4> {{ artwork.description }}</h4> -->
+                        <h4 class="my-4"> Admirers: </h4>
+                        <p> {{ admirer.name }} </p>
+                        <img :src="admirer.picture" :alt="artwork.height">
+
                     </div>
 
 
 
 
-                    ...
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -59,4 +65,8 @@ defineProps({
 </template>
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.change-bg-color {
+    background-color: #ebb866;
+}
+</style>

@@ -52,7 +52,7 @@ async function discoverArt() {
 
   <section>
     <section class="row">
-      <div class="col-md-2 border my-2">
+      <div class="col-md-2 border my-2 first-col sticky-top">
         <div class="my-2">
           <Login />
         </div>
@@ -85,7 +85,7 @@ async function discoverArt() {
 
             <ArtworkCard :artwork="artwork" />
 
-            <ArtworkModal :modalId=artwork.id modalTitle="Artwork" :artwork="artwork" />
+            <ArtworkModal :modalId=artwork.id :modalTitle="artwork.slug" :artwork="artwork" />
 
           </div>
         </section>
@@ -128,5 +128,12 @@ async function discoverArt() {
 .page-navigator {
   position: relative;
   top: 400px
+}
+
+@media (max-width: 768px) {
+
+  .page-navigator {
+    position: static;
+  }
 }
 </style>

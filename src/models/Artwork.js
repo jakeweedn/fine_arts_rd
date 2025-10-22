@@ -11,8 +11,13 @@ export class Artwork {
         this.originalLink = data.originalLink
         this.imgUrl = data.imgUrls.small
 
+        //Extra attributes
         this.admirers = data.admirers
         this.admirersIds = data.admirersIds
+
+        this.description = data.description
+
+
 
     }
 
